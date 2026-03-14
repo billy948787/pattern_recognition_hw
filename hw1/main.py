@@ -50,13 +50,6 @@ for i in range(len(iris.feature_names)):
 
 print("-" * 42)
 
-# features_avg = np.mean(iris.data, axis=0) 
-# features_sd = np.std(iris.data, axis=0, ddof=1)
-
-# for i in range(len(iris.feature_names)):
-#     print(f"{iris.feature_names[i]} avg: {features_avg[i]}")
-#     print(f"{iris.feature_names[i]} sd: {features_sd[i]}")
-
 # scatter plot matrix
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 df["target"] = pd.Series(iris.target)
@@ -73,6 +66,7 @@ plt.tight_layout()
 plt.show(block = False)
 
 # two of most relevant features 
+# 因為從scatter plot matrix裡面看起來，petal length和petal width的分佈比較明顯，所以選擇這兩個特徵來畫散點圖
 (x, y) = (2, 3)
 
 plt.figure(figsize=(5, 5))
@@ -103,3 +97,5 @@ for x in y_test:
     test_target_counts[x] += 1
 for i, count in enumerate(test_target_counts):
     print(f"    {iris.target_names[i]} : {count} ("f"{(count / len(X_test)) * 100:.2f}%)")
+
+plt.show()
