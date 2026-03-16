@@ -41,7 +41,6 @@ plt.ylabel("y")
 plt.title("Data Distribution (Train / Validation / Test)")
 plt.legend()
 plt.tight_layout()
-plt.savefig("data_distribution.png")
 plt.show()
 
 
@@ -86,7 +85,6 @@ plt.legend()
 plt.xticks(degrees)
 plt.yscale("log")  # 用 log scale 讓差距更清楚
 plt.tight_layout()
-plt.savefig("error_curve.png")
 plt.show()
 
 # 4.5 畫出每個 degree 的預測曲線
@@ -125,7 +123,6 @@ for i, degree in enumerate(degrees):
 
 plt.suptitle("Polynomial Fit for Each Degree", fontsize=14)
 plt.tight_layout()
-plt.savefig("fit_curves.png")
 plt.show()
 
 
